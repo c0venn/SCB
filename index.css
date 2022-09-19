@@ -1,0 +1,53 @@
+p, h4 {
+  color: #e76b4b;
+  font-weight: 500;
+}
+nav a {
+  color: rgb(231, 107, 75);
+  font-weight: 900;
+}
+a.link:hover {
+  color: rgb(231, 107, 75);
+  opacity: 0.5;
+}
+div h2 {
+  font-weight: 900;
+  font-size: xx-large;
+}
+p.somos {
+  max-width: 500px;
+  padding: 30px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+img.carousel {
+  max-height: 670px;
+}
+
+img.galery {
+  max-height: 670px;
+}
+
+div.galery {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(231,107,75);
+  outline: 1px solid slategrey;
+  border-radius: 5%;
+}
+
+@media (min-width: 1400px) {
+  img.portada {
+    margin-top: -250px;
+  }
+} 
