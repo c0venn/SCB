@@ -1,6 +1,7 @@
 const container = document.querySelector('.row')
 const carrusel = document.querySelector('.carousel-inner')
 
+
 const sourceHorizontal = [
     {
         id: 1,

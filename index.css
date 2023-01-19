@@ -31,6 +31,10 @@ section.preguntas p {
 section.preguntas p a {
   color: rgb(231,107,75);
 }
+iframe#youtube {
+  height: 720px;
+  max-height: 670px;
+}
 img.carousel {
   max-height: 670px;
 }
