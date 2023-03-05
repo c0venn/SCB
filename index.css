@@ -38,6 +38,10 @@ img.carousel {
 img.galery {
   max-height: 670px;
 }
+img.icon{
+  width: 24px;
+  height: 24px;
+}
 
 div.galery {
   margin-top: 5rem;
