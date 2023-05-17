@@ -5,14 +5,42 @@ const carrusel = document.querySelector('.carousel-inner')
 const sourceHorizontal = [
     {
         id: 1,
-        src: "https://github.com/c0venn/SCB/blob/main/images/2.jpg?raw=true"
+        src: "https://github.com/c0venn/SCB/blob/main/images/1.jpg?raw=true"
     },
     {
         id: 2,
+        src: "https://github.com/c0venn/SCB/blob/main/images/2.jpg?raw=true"
+    },
+    {
+        id: 3,
         src: "https://github.com/c0venn/SCB/blob/main/images/3.jpg?raw=true"
-    }
+    },
 ]
 const sourceVertical = [
+    {
+        id: 0,
+        src: "https://github.com/c0venn/SCB/blob/main/images/v27.jpg?raw=true"
+    },
+    {
+        id: 29,
+        src: "https://github.com/c0venn/SCB/blob/main/images/v29.jpg?raw=true"
+    },
+    {
+        id: 31,
+        src: "https://github.com/c0venn/SCB/blob/main/images/v31.jpg?raw=true"
+    },
+    {
+        id: 33,
+        src: "https://github.com/c0venn/SCB/blob/main/images/v33.jpg?raw=true"
+    },
+    {
+        id: 34,
+        src: "https://github.com/c0venn/SCB/blob/main/images/v34.jpg?raw=true"
+    },
+    {
+        id: 37,
+        src: "https://github.com/c0venn/SCB/blob/main/images/v37.jpg?raw=true"
+    },
     {
         id: 1,
         src: "https://github.com/c0venn/SCB/blob/main/images/v1.jpg?raw=true"
@@ -116,7 +144,27 @@ const sourceVertical = [
     {
         id: 26,
         src: "https://github.com/c0venn/SCB/blob/main/images/v26.jpg?raw=true"
-    }
+    },
+    {
+        id: 27,
+        src: "https://github.com/c0venn/SCB/blob/main/images/v28.jpg?raw=true"
+    },
+    {
+        id: 30,
+        src: "https://github.com/c0venn/SCB/blob/main/images/v30.jpg?raw=true"
+    },
+    {
+        id: 32,
+        src: "https://github.com/c0venn/SCB/blob/main/images/v32.jpg?raw=true"
+    },
+    {
+        id: 35,
+        src: "https://github.com/c0venn/SCB/blob/main/images/v35.jpg?raw=true"
+    },
+    {
+        id: 36,
+        src: "https://github.com/c0venn/SCB/blob/main/images/v36.jpg?raw=true"
+    },
 ]
 async function fetchPhotos() {
     try {
