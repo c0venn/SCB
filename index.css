@@ -31,6 +31,13 @@ section.preguntas p {
 section.preguntas p a {
   color: rgb(231,107,75);
 }
+section.micasino p.codigo {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 55%;
+  font-size: xxx-large;
+}
 img.carousel {
   max-height: 670px;
 }
