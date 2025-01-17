@@ -2,8 +2,7 @@ const container = document.querySelector(".row");
 const carpetGalery = document.querySelector(".carpetGalery");
 const carrusel = document.querySelector(".carousel-inner");
 
-let photos = [{ id: 0, src: "/images/camp.jpg", title: "Campamento CG Academy", drive:"https://drive.google.com/drive/folders/1-2AQe6Ql9nke7rv2r-UIp1fXeKFpZUSh?usp=sharing" },
-{id:1, src: "images/villachangas.jpg", title: "La VillaChangas", drive: "https://drive.google.com/drive/folders/1prV6lQQbRuaRCbAGmDETjddgt43Mt_bt?usp=sharing"}];
+let photos = "data.json";
 
 const sourceHorizontal = [
   {
@@ -172,24 +171,27 @@ const sourceVertical = [
 
 async function GetImagesCarpet() {
   try {
-    const photosC = await getCarpet;
-    console.log(photosC);
-    photosC.forEach((element) => {
-      div = document.createElement("div");
-      div.className = "container text-center p-4"
-      h2 = document.createElement("h2");
-      h2.className= "d-flex justify-content-center text-white";
-      h2.textContent= `${element.title}`;
-      div.appendChild(h2);
-      anch = document.createElement("a");
-      anch.href = `${element.drive}`;
-      img = document.createElement("img");
-      img.className = "carpetimg img-fluid";
-      img.src = `${element.src}`;
-      anch.appendChild(img);
-      div.appendChild(anch);
-      carpetGalery.appendChild(div);
-    });
+    fetch(photos)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        data.forEach((element) => {
+          div = document.createElement("div");
+          div.className = "container text-center p-4";
+          h2 = document.createElement("h2");
+          h2.className = "d-flex justify-content-center text-white";
+          h2.textContent = `${element.title}`;
+          div.appendChild(h2);
+          element.images.forEach((image) => {
+            console.log(image);
+            img = document.createElement("img");
+            img.className = "carpetimg img-fluid p-4";
+            img.src = `${image}`;
+            div.appendChild(img);
+          });
+          carpetGalery.appendChild(div);
+        });
+      });
   } catch (error) {
     console.log(error);
   }
