@@ -17,6 +17,42 @@ const sourceHorizontal = [
     id: 3,
     src: "https://github.com/c0venn/SCB/blob/main/images/3.jpg?raw=true",
   },
+  {
+    id: 5,
+    src: "https://github.com/c0venn/SCB/blob/main/images/5.jpg?raw=true"
+  },
+  {
+    id: 6,
+    src: "https://github.com/c0venn/SCB/blob/main/images/6.jpg?raw=true"
+  },
+  {
+    id: 7,
+    src: "https://github.com/c0venn/SCB/blob/main/images/7.jpg?raw=true"
+  },
+  {
+    id: 8,
+    src: "https://github.com/c0venn/SCB/blob/main/images/8.jpg?raw=true"
+  },
+  {
+    id: 9,
+    src: "https://github.com/c0venn/SCB/blob/main/images/9.jpg?raw=true"
+  },
+  {
+    id: 10,
+    src: "https://github.com/c0venn/SCB/blob/main/images/10.jpg?raw=true"
+  },
+  {
+    id: 11,
+    src: "https://github.com/c0venn/SCB/blob/main/images/11.jpg?raw=true"
+  },
+  {
+    id: 12,
+    src: "https://github.com/c0venn/SCB/blob/main/images/12.jpg?raw=true"
+  },
+  {
+    id: 13,
+    src: "https://github.com/c0venn/SCB/blob/main/images/13.jpg?raw=true"
+  }
 ];
 const sourceVertical = [
   {
@@ -167,6 +203,30 @@ const sourceVertical = [
     id: 36,
     src: "https://github.com/c0venn/SCB/blob/main/images/v36.jpg?raw=true",
   },
+  {
+    id: 38,
+    src: "https://github.com/c0venn/SCB/blob/main/images/v38.jpg?raw=true"
+  },
+  {
+    id: 39,
+    src: "https://github.com/c0venn/SCB/blob/main/images/v39.jpg?raw=true"
+  },
+  {
+    id: 40,
+    src: "https://github.com/c0venn/SCB/blob/main/images/v40.jpg?raw=true"
+  },
+  {
+    id: 41,
+    src: "https://github.com/c0venn/SCB/blob/main/images/v41.jpg?raw=true"
+  },
+  {
+    id: 42,
+    src: "https://github.com/c0venn/SCB/blob/main/images/v42.jpg?raw=true"
+  },
+  {
+    id: 43,
+    src: "https://github.com/c0venn/SCB/blob/main/images/v43.jpg?raw=true"
+  }
 ];
 
 async function GetImagesCarpet() {
