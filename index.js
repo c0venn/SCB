@@ -56,20 +56,8 @@ const sourceHorizontal = [
 ];
 const sourceVertical = [
   {
-    id: 0,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v27.jpg?raw=true",
-  },
-  {
-    id: 29,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v29.jpg?raw=true",
-  },
-  {
     id: 31,
     src: "https://github.com/c0venn/SCB/blob/main/images/v31.jpg?raw=true",
-  },
-  {
-    id: 33,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v33.jpg?raw=true",
   },
   {
     id: 34,
