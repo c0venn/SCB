@@ -80,44 +80,12 @@ const sourceVertical = [
     src: "https://github.com/c0venn/SCB/blob/main/images/v37.jpg?raw=true",
   },
   {
-    id: 1,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v1.jpg?raw=true",
-  },
-  {
-    id: 2,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v2.jpg?raw=true",
-  },
-  {
-    id: 3,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v3.jpg?raw=true",
-  },
-  {
-    id: 4,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v4.jpg?raw=true",
-  },
-  {
     id: 5,
     src: "https://github.com/c0venn/SCB/blob/main/images/v5.jpg?raw=true",
   },
   {
-    id: 6,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v6.jpg?raw=true",
-  },
-  {
     id: 7,
     src: "https://github.com/c0venn/SCB/blob/main/images/v7.jpg?raw=true",
-  },
-  {
-    id: 8,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v8.jpg?raw=true",
-  },
-  {
-    id: 9,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v9.jpg?raw=true",
-  },
-  {
-    id: 10,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v10.jpg?raw=true",
   },
   {
     id: 11,
@@ -128,10 +96,6 @@ const sourceVertical = [
     src: "https://github.com/c0venn/SCB/blob/main/images/v12.jpg?raw=true",
   },
   {
-    id: 13,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v13.jpg?raw=true",
-  },
-  {
     id: 14,
     src: "https://github.com/c0venn/SCB/blob/main/images/v14.jpg?raw=true",
   },
@@ -140,28 +104,8 @@ const sourceVertical = [
     src: "https://github.com/c0venn/SCB/blob/main/images/v15.jpg?raw=true",
   },
   {
-    id: 16,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v16.jpg?raw=true",
-  },
-  {
-    id: 17,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v17.jpg?raw=true",
-  },
-  {
-    id: 18,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v18.jpg?raw=true",
-  },
-  {
-    id: 19,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v19.jpg?raw=true",
-  },
-  {
     id: 20,
     src: "https://github.com/c0venn/SCB/blob/main/images/v20.jpg?raw=true",
-  },
-  {
-    id: 21,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v21.jpg?raw=true",
   },
   {
     id: 22,
@@ -184,20 +128,12 @@ const sourceVertical = [
     src: "https://github.com/c0venn/SCB/blob/main/images/v26.jpg?raw=true",
   },
   {
-    id: 27,
+    id: 28,
     src: "https://github.com/c0venn/SCB/blob/main/images/v28.jpg?raw=true",
-  },
-  {
-    id: 30,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v30.jpg?raw=true",
   },
   {
     id: 32,
     src: "https://github.com/c0venn/SCB/blob/main/images/v32.jpg?raw=true",
-  },
-  {
-    id: 35,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v35.jpg?raw=true",
   },
   {
     id: 36,

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Donación Completada!</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f9fafb;
+        font-family: Arial, sans-serif;
+        background: url("logo.png") no-repeat center center fixed;
+      }
+      .container {
+        max-width: 400px;
+        width: 100%;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s, transform 0.5s;
+      }
+      .container.visible {
+        opacity: 0.96;
+        transform: translateY(0);
+      }
+      .icon {
+        font-size: 80px;
+        color: #10b981;
+        margin-bottom: 1.5rem;
+        transition: transform 0.5s;
+      }
+      .icon.visible {
+        transform: scale(1);
+      }
+      h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      h1.visible {
+        opacity: 1;
+      }
+      p {
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      p.visible {
+        opacity: 1;
+      }
+      .button {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        background-color: #10b981;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s;
+      }
+      .button:hover {
+        background-color: #059669;
+      }
+      .reference {
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: #f3f4f6;
+        border-radius: 0.5rem;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      .reference.visible {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="icon" id="icon">✔️</div>
+      <h1 id="title">¡Donación Completada!</h1>
+      <p id="message">
+        Muchas gracias por tu generosa donación. Tu apoyo es fundamental para
+        nosotros. Te hemos enviado un recibo a tu correo electrónico.
+      </p>
+      <a href="/" class="button">Volver a la Página Principal</a>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        document.getElementById("container").classList.add("visible");
+        document.getElementById("icon").classList.add("visible");
+        document.getElementById("title").classList.add("visible");
+        document.getElementById("message").classList.add("visible");
+        document.getElementById("reference").classList.add("visible");
+        document.getElementById("reference-number").textContent =
+          generateReference();
+      });
+    </script>
+  </body>
+</html>

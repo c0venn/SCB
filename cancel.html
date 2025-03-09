@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donación Cancelada</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f9fafb;
+        font-family: Arial, sans-serif;
+        background: url("logo.png") no-repeat center center fixed;
+      }
+      .container {
+        max-width: 400px;
+        width: 100%;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s, transform 0.5s;
+      }
+      .container.visible {
+        opacity: 0.96;
+        transform: translateY(0);
+      }
+      .icon {
+        font-size: 80px;
+        color: #ef4444;
+        margin-bottom: 1.5rem;
+        transition: transform 0.5s;
+      }
+      .icon.visible {
+        transform: scale(1);
+      }
+      h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      p {
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        background-color: #3b82f6;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s;
+      }
+      .button:hover {
+        background-color: #2563eb;
+      }
+      .link {
+        color: #3b82f6;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .link:hover {
+        color: #1d4ed8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="icon" id="icon">❌</div>
+      <h1>Donación Cancelada</h1>
+      <p>
+        Has cancelado el proceso de donación. Gracias por tu consideración. Si
+        cambias de opinión, siempre puedes volver a intentarlo!
+      </p>
+      <a href="/#paypal-donate-button" class="button">Volver a Intentar</a>
+      <a href="/" class="link">Volver a la Página Principal</a>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        document.getElementById("container").classList.add("visible");
+        document.getElementById("icon").classList.add("visible");
+      });
+    </script>
+  </body>
+</html>
