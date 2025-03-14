@@ -54,128 +54,28 @@ const sourceHorizontal = [
     src: "https://github.com/c0venn/SCB/blob/main/images/13.jpg?raw=true"
   }
 ];
-const sourceVertical = [
-  {
-    id: 31,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v31.jpg?raw=true",
-  },
-  {
-    id: 34,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v34.jpg?raw=true",
-  },
-  {
-    id: 37,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v37.jpg?raw=true",
-  },
-  {
-    id: 5,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v5.jpg?raw=true",
-  },
-  {
-    id: 7,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v7.jpg?raw=true",
-  },
-  {
-    id: 11,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v11.jpg?raw=true",
-  },
-  {
-    id: 12,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v12.jpg?raw=true",
-  },
-  {
-    id: 14,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v14.jpg?raw=true",
-  },
-  {
-    id: 15,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v15.jpg?raw=true",
-  },
-  {
-    id: 20,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v20.jpg?raw=true",
-  },
-  {
-    id: 22,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v22.jpg?raw=true",
-  },
-  {
-    id: 23,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v23.jpg?raw=true",
-  },
-  {
-    id: 24,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v24.jpg?raw=true",
-  },
-  {
-    id: 25,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v25.jpg?raw=true",
-  },
-  {
-    id: 26,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v26.jpg?raw=true",
-  },
-  {
-    id: 28,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v28.jpg?raw=true",
-  },
-  {
-    id: 32,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v32.jpg?raw=true",
-  },
-  {
-    id: 36,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v36.jpg?raw=true",
-  },
-  {
-    id: 38,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v38.jpg?raw=true"
-  },
-  {
-    id: 39,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v39.jpg?raw=true"
-  },
-  {
-    id: 40,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v40.jpg?raw=true"
-  },
-  {
-    id: 41,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v41.jpg?raw=true"
-  },
-  {
-    id: 42,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v42.jpg?raw=true"
-  },
-  {
-    id: 43,
-    src: "https://github.com/c0venn/SCB/blob/main/images/v43.jpg?raw=true"
-  }
-];
 
 async function GetImagesCarpet() {
   try {
-    fetch(photos)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        data.forEach((element) => {
-          div = document.createElement("div");
-          div.className = "container text-center p-4";
-          h2 = document.createElement("h2");
-          h2.className = "d-flex justify-content-center text-white";
-          h2.textContent = `${element.title}`;
-          div.appendChild(h2);
-          element.images.forEach((image) => {
-            console.log(image);
-            img = document.createElement("img");
-            img.className = "carpetimg img-fluid p-4";
-            img.src = `${image}`;
-            div.appendChild(img);
-          });
-          carpetGalery.appendChild(div);
-        });
+    const response = await fetch(photos);
+    const data = await response.json();
+    console.log(data);
+    data.forEach((element) => {
+      const div = document.createElement("div");
+      div.className = "container text-center p-4";
+      const h2 = document.createElement("h2");
+      h2.className = "d-flex justify-content-center text-white";
+      h2.textContent = element.title;
+      div.appendChild(h2);
+      element.images.forEach((image) => {
+        console.log(image);
+        const img = document.createElement("img");
+        img.className = "carpetimg img-fluid p-4";
+        img.src = image;
+        div.appendChild(img);
       });
+      carpetGalery.appendChild(div);
+    });
   } catch (error) {
     console.log(error);
   }
@@ -188,15 +88,16 @@ const getCarpet = new Promise((resolve, reject) => {
     resolve(photos);
   }
 });
+
 async function fetchPhotos() {
   try {
     const photosV = await getVertical;
     photosV.forEach((element) => {
-      col = document.createElement("div");
+      const col = document.createElement("div");
       col.className = "photoVertical col-md-4 text-center p-2";
-      img = document.createElement("img");
+      const img = document.createElement("img");
       img.className = "galery img-fluid";
-      img.src = `${element.src}`;
+      img.src = element.src;
       container.appendChild(col);
       col.appendChild(img);
     });
@@ -216,14 +117,25 @@ const getVertical = new Promise((resolve, reject) => {
 async function fetchPhotosHorizontal() {
   try {
     const photoHorizontal = await getHorizontal;
-    photoHorizontal.forEach((element) => {
-      div = document.createElement("div");
+    
+    // Set first item as active
+    const firstDiv = document.createElement("div");
+    firstDiv.className = "carousel-item active";
+    const firstImg = document.createElement("img");
+    firstImg.className = "carousel img-fluid";
+    firstImg.src = photoHorizontal[0].src;
+    firstDiv.appendChild(firstImg);
+    carrusel.appendChild(firstDiv);
+
+    // Add rest of the items
+    photoHorizontal.slice(1).forEach((element) => {
+      const div = document.createElement("div");
       div.className = "carousel-item";
-      img = document.createElement("img");
+      const img = document.createElement("img");
       img.className = "carousel img-fluid";
-      img.src = `${element.src}`;
-      carrusel.appendChild(div);
+      img.src = element.src;
       div.appendChild(img);
+      carrusel.appendChild(div);
     });
   } catch (error) {
     console.log(error);
